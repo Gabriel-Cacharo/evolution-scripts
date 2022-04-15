@@ -1,0 +1,89 @@
+@media (max-width: 1400px) {
+  .forgotPasswordPage {
+    .leftContainer {
+      // Shrink image
+      img {
+        height: 500px;
+        width: 450px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .forgotPasswordPage {
+    // Left Container flex column
+    .leftContainer {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      width: 65%;
+
+      ul {
+        margin-right: 0;
+
+        li {
+          font-size: 1.1rem;
+        }
+      }
+
+      // Shrink image
+      img {
+        height: 500px;
+        width: 380px;
+      }
+    }
+
+    .rightContainer {
+      width: 35%;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  // Login Page flex column
+  .forgotPasswordPage {
+    flex-direction: column;
+    max-height: 900vh;
+
+    // Right Container
+    .rightContainer {
+      width: 100%;
+
+      margin: 50px 0px;
+    }
+
+    // Left Container
+    .leftContainer {
+      width: 100%;
+      height: 90vh;
+
+      clip-path: polygon(0 0, 100% 0%, 100% 88%, 0% 100%);
+
+      // Left image
+      img {
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .forgotPasswordPage {
+    // Shrink image
+    .leftContainer {
+      img {
+        height: 400px;
+        width: 280px;
+
+        margin-bottom: 30px;
+      }
+
+      // Shrink font
+      ul li {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

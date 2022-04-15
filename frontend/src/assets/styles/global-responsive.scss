@@ -1,0 +1,19 @@
+// Grid Responsivo
+
+@media (max-width: 1000px) {
+  .App {
+    grid-template-rows: 150px 1fr 450px;
+  }
+}
+
+@media (max-width: 850px) {
+  .App {
+    grid-template-rows: 250px 1fr 450px;
+  }
+}
+
+@media (max-width: 550px) {
+  .App {
+    grid-template-rows: 380px 1fr 450px;
+  }
+}

@@ -1,0 +1,119 @@
+@media (max-width: 1500px) {
+  .landingPageContainer {
+    .firstInformationLandingPageContainer .textFirstInformationContainer {
+      // Evolution Scripts Título
+      .headingFirstInformationContainer {
+        h2 {
+          font-size: 3.5rem;
+        }
+
+        i {
+          font-size: 3rem;
+        }
+      }
+
+      // Texto em baixo
+      p {
+        max-width: 600px;
+      }
+    }
+
+    // Produtos mais vendidos
+    .secondInformationLandingPageContainer {
+      flex-direction: column;
+
+      .textSecondInformationContainer {
+        margin-top: 60px;
+      }
+
+      img.secondInformationImage {
+        height: 700px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .landingPageContainer {
+    .firstInformationLandingPageContainer {
+      height: 120vh;
+      flex-direction: column;
+
+      img {
+        height: 700px;
+        margin-left: 40px;
+      }
+
+      .textFirstInformationContainer {
+        margin-top: 40px;
+        margin-bottom: 0;
+
+        p {
+          max-width: 950px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .landingPageContainer {
+    .firstInformationLandingPageContainer .textFirstInformationContainer {
+      // Evolution Scripts Título
+      .headingFirstInformationContainer {
+        h2 {
+          font-size: 2.5rem;
+        }
+
+        i {
+          font-size: 3rem;
+        }
+      }
+
+      // Texto em baixo
+      p {
+        font-size: 0.9rem;
+        max-width: 500px;
+      }
+    }
+    .secondInformationLandingPageContainer img.secondInformationImage {
+      margin: 0;
+      height: 500px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .landingPageContainer {
+    .firstInformationLandingPageContainer {
+      .textFirstInformationContainer .headingFirstInformationContainer h2 {
+        line-height: 45px;
+        margin: 0px 10px;
+      }
+
+      img {
+        height: 500px;
+        margin: 0;
+      }
+    }
+
+    .secondInformationLandingPageContainer {
+      .textSecondInformationContainer {
+        h2 {
+          font-size: 2rem;
+          margin: 0px 10px;
+        }
+      }
+    }
+
+    .qualitiesContainer {
+      padding: 20px;
+
+      h2 {
+        font-size: 2rem;
+        text-align: center;
+        margin: 0px 10px;
+      }
+    }
+  }
+}

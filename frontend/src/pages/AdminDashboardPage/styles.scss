@@ -1,0 +1,42 @@
+@import '../../assets/styles/layouts';
+@import '../../assets/styles/variables';
+
+.adminDashboardPage {
+  padding: 30px;
+  min-height: calc(100vh - 150px);
+
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)),
+    url('../../assets/imgs/backgroundTop.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  // Page Title
+  h2 {
+    @include flexCenterItems;
+
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 20px;
+
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      color: $light-purple;
+      transform: translateY(-0.5rem);
+    }
+
+    i {
+      font-size: 4rem;
+      margin-right: 30px;
+      color: $light-purple;
+      filter: drop-shadow(0 0 2px #bc8cf257) drop-shadow(0 0 4px #bc8cf257) drop-shadow(0 0 6px #bc8cf257);
+    }
+  }
+
+  .productsContainer {
+    @include flexCenterItems;
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+  }
+}

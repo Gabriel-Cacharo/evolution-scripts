@@ -1,0 +1,82 @@
+@import '../../assets/styles/layouts';
+@import '../../assets/styles/variables';
+
+.myProductContainer {
+  width: 70%;
+  height: 80px;
+
+  padding: 20px 30px;
+  margin: 20px 0px;
+
+  background-color: $black;
+  -webkit-box-shadow: 0px 0px 15px 0px #00000031;
+  box-shadow: 0px 0px 15px 0px #00000031;
+  border-radius: 7px;
+
+  @include flexSpaceBetween;
+  position: relative;
+
+  // Product title
+  h4 {
+    font-size: 1.5rem;
+
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+      color: $light-purple;
+    }
+  }
+
+  // Product download
+  button {
+    @include flexCenterItems;
+
+    border: 0;
+    background: $dark-purple;
+    border-radius: 6px;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: $white;
+
+    height: 40px;
+    width: 140px;
+
+    cursor: pointer;
+
+    transition: all 200ms ease-in-out;
+
+    i {
+      font-size: 1.5rem;
+      margin-right: 10px;
+      color: $light-purple;
+      filter: drop-shadow(0 0 2px #bc8cf257) drop-shadow(0 0 4px #bc8cf257) drop-shadow(0 0 6px #bc8cf257);
+
+      transition: all 200ms ease-in-out;
+    }
+
+    &:hover {
+      background: $light-purple;
+
+      transform: translateX(0.3rem);
+
+      i {
+        color: $dark-purple;
+        filter: drop-shadow(0 0 2px #aa14f071) drop-shadow(0 0 4px #aa14f071) drop-shadow(0 0 6px #aa14f071);
+      }
+    }
+  }
+
+  // Border bottom
+  &:after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: $dark-purple;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    filter: drop-shadow(0 0 2px #aa14f09d) drop-shadow(0 0 4px #aa14f09d) drop-shadow(0 0 6px #aa14f09d);
+  }
+}

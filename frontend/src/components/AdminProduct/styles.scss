@@ -1,0 +1,91 @@
+@import '../../assets/styles/layouts';
+@import '../../assets/styles/variables';
+
+.productAdminContainer {
+  @include flexSpaceEvenly;
+  flex-direction: column;
+
+  height: 280px;
+  width: 230px;
+  margin: 20px;
+
+  background: $dark-grey;
+
+  transition: all 200ms ease-in-out;
+
+  .productNameAndId {
+    @include flexCenterItems;
+    flex-direction: column;
+
+    // Name
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    small {
+      color: rgb(163, 163, 163);
+      margin-top: 2px;
+    }
+  }
+
+  // Product Price
+  .productPrice {
+    h6 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $white;
+
+      span {
+        color: $dark-purple;
+        font-weight: 700;
+      }
+    }
+  }
+
+  // Buttons
+  .productButtons {
+    @include flexCenterItems;
+    flex-direction: column;
+
+    width: 100%;
+
+    button {
+      @include flexCenterItems;
+
+      width: 80%;
+      padding: 5px 0px;
+      margin: 5px 0px;
+      border: 2px solid $dark-purple;
+      border-radius: 12px;
+      background-color: transparent;
+
+      font-size: 0.95rem;
+      font-weight: 500;
+
+      cursor: pointer;
+
+      transition: all 200ms ease-in-out;
+
+      i {
+        transition: all 200ms ease-in-out;
+        margin-right: 5px;
+        font-size: 1.05rem;
+        color: $light-purple;
+        filter: drop-shadow(0 0 1px #bc8cf23f) drop-shadow(0 0 2px #bc8cf23f) drop-shadow(0 0 3px #bc8cf23f);
+      }
+
+      &:hover {
+        font-weight: 600;
+
+        color: $dark-purple;
+        i {
+          color: $dark-purple;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}

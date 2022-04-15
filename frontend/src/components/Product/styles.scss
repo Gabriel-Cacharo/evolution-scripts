@@ -1,0 +1,176 @@
+@import '../../assets/styles/layouts';
+@import '../../assets/styles/variables';
+
+.productContainer {
+  @include flexSpaceEvenly;
+  flex-direction: column;
+
+  margin: 30px 15px;
+  margin-top: 50px;
+
+  background: $dark-grey;
+  height: 500px;
+  width: 300px;
+  padding: 10px;
+
+  -webkit-box-shadow: 0px 0px 6px 0px #00000079;
+  box-shadow: 0px 0px 6px 0px #00000079;
+
+  transition: all 200ms ease-in-out;
+
+  // Imagem do Produto
+  img {
+    height: 10rem;
+    margin-left: 0;
+  }
+
+  // Título do Produto
+  h5 {
+    font-size: 1.6rem;
+    transition: all 200ms ease-in-out;
+
+    color: $white;
+
+    &:hover {
+      color: $light-purple;
+      transform: translateY(-0.2rem);
+    }
+  }
+
+  // Descrição do Produto
+  ul li {
+    @include flexCenterItems;
+    font-size: 1.2rem;
+    margin: 8px 0px;
+
+    color: $paragraph-color;
+
+    i {
+      color: $dark-purple;
+      margin-right: 5px;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  // Preço do Produto
+  .productPrice {
+    h6 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $white;
+
+      span {
+        color: $dark-purple;
+        font-weight: 700;
+      }
+    }
+  }
+
+  // Footer do Produto
+  .productFooter {
+    width: 100%;
+    @include flexSpaceEvenly;
+
+    // Botão de comprar
+    .productBuy {
+      @include flexCenterItems;
+
+      width: 100%;
+      padding: 11px 20px;
+      border: 2px solid $dark-purple;
+      border-radius: 12px 0px 0px 12px;
+      background-color: transparent;
+      // background-color: $dark-purple;
+
+      font-size: 1.05rem;
+      font-weight: 500;
+
+      cursor: pointer;
+
+      transition: all 200ms ease-in-out;
+
+      i {
+        transition: all 200ms ease-in-out;
+        margin-right: 5px;
+        font-size: 1.05rem;
+        color: $light-purple;
+        filter: drop-shadow(0 0 1px #bc8cf23f) drop-shadow(0 0 2px #bc8cf23f) drop-shadow(0 0 3px #bc8cf23f);
+      }
+
+      &:hover {
+        font-weight: 600;
+
+        color: $dark-purple;
+        i {
+          color: $dark-purple;
+        }
+      }
+    }
+
+    // Botão de adicionar no carrinho
+    .productAddToCart {
+      padding: 7.5px 20px;
+      background-color: transparent;
+      border: 0;
+      border: 2px solid $dark-purple;
+      border-left: 0;
+      border-radius: 0px 12px 12px 0px;
+      font-size: 1.45rem;
+
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
+
+      i {
+        transition: all 200ms ease-in-out;
+
+        color: $dark-purple;
+        // filter: drop-shadow(0 0 2px #aa14f071) drop-shadow(0 0 4px #aa14f071) drop-shadow(0 0 6px #aa14f071);
+      }
+
+      &:hover {
+        i {
+          color: $light-purple;
+          filter: drop-shadow(0 0 2px #bc8cf269) drop-shadow(0 0 4px #bc8cf269) drop-shadow(0 0 6px #bc8cf269);
+        }
+      }
+    }
+
+    .productRemoveFromCart {
+      @include flexCenterItems;
+
+      width: 100%;
+      padding: 11px 20px;
+      border: 2px solid $dark-purple;
+      border-radius: 12px;
+      background-color: transparent;
+      // background-color: $dark-purple;
+
+      font-size: 1.05rem;
+      font-weight: 500;
+
+      cursor: pointer;
+
+      transition: all 200ms ease-in-out;
+
+      i {
+        transition: all 200ms ease-in-out;
+        margin-right: 5px;
+        font-size: 1.05rem;
+        color: $light-purple;
+        filter: drop-shadow(0 0 1px #bc8cf23f) drop-shadow(0 0 2px #bc8cf23f) drop-shadow(0 0 3px #bc8cf23f);
+      }
+
+      &:hover {
+        font-weight: 600;
+
+        color: $dark-purple;
+        i {
+          color: $dark-purple;
+        }
+      }
+    }
+  }
+}

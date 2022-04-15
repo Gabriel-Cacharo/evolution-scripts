@@ -1,0 +1,224 @@
+@import '../../assets/styles/layouts';
+@import '../../assets/styles/variables';
+
+.landingPageContainer {
+  // First div of LandingPage
+  .firstInformationLandingPageContainer {
+    @include flexSpaceEvenly;
+
+    height: calc(100vh - 140px);
+
+    background-image: url('../../assets/imgs/backgroundBottom.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    // Left texts
+    .textFirstInformationContainer {
+      @include flexCenterItems;
+      flex-direction: column;
+      flex: 1;
+
+      text-align: center;
+      margin: 0px 20px;
+      margin-bottom: 120px;
+
+      // Title
+      .headingFirstInformationContainer {
+        @include flexCenterItems;
+
+        h2 {
+          font-size: 4.5rem;
+          border-bottom: 2px solid $light-purple;
+          color: $white;
+          line-height: 80px;
+
+          transition: all 200ms ease-in-out;
+
+          &:hover {
+            color: $light-purple;
+            transform: translateY(-0.5rem);
+            border-bottom: 2px solid $dark-purple;
+          }
+        }
+
+        i {
+          font-size: 4rem;
+          margin-right: 30px;
+          color: $light-purple;
+          filter: drop-shadow(0 0 2px #bc8cf257) drop-shadow(0 0 4px #bc8cf257) drop-shadow(0 0 6px #bc8cf257);
+        }
+      }
+
+      // Paragraph
+      p {
+        max-width: 900px;
+        line-height: 25px;
+
+        margin-top: 20px;
+        color: $paragraph-color;
+      }
+    }
+
+    // Right image
+    img {
+      height: 100%;
+    }
+  }
+
+  // Qualities
+  .qualitiesContainer {
+    @include flexSpaceEvenly;
+    flex-direction: column;
+
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0)),
+      url('../../assets/imgs/Gta5Wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    padding: 50px;
+
+    // Section title
+    h2 {
+      @include flexCenterItems;
+
+      font-size: 2.5rem;
+      border-bottom: 2px solid $light-purple;
+      color: $white;
+      margin-bottom: 30px;
+
+      transition: all 200ms ease-in-out;
+
+      &:hover {
+        color: $light-purple;
+        transform: translateY(-0.5rem);
+      }
+
+      i {
+        margin-right: 10px;
+        color: $light-purple;
+        filter: drop-shadow(0 0 2px #bc8cf257) drop-shadow(0 0 4px #bc8cf257) drop-shadow(0 0 6px #bc8cf257);
+      }
+    }
+
+    // Qualities components
+    .qualities {
+      @include flexCenterItems;
+      flex-wrap: wrap;
+
+      // Qualities
+      .qualityContainer {
+        @include flexSpaceEvenly;
+        flex-direction: column;
+        text-align: center;
+
+        background: $dark-grey;
+        height: 210px;
+        width: 250px;
+        padding: 10px 7px;
+
+        position: relative;
+
+        margin: 20px 30px;
+
+        box-shadow: 0px 0px 6px 0px #00000079;
+
+        transition: all 200ms ease-in-out;
+
+        i {
+          color: $dark-purple;
+          filter: drop-shadow(0 0 2px #aa14f071) drop-shadow(0 0 4px #aa14f071) drop-shadow(0 0 6px #aa14f071);
+          font-size: 2.5rem;
+        }
+
+        // Title
+        h5 {
+          font-size: 1.2rem;
+
+          border-bottom: 2px solid $dark-purple;
+          color: $white;
+        }
+
+        // Description
+        p {
+          font-size: 0.95rem;
+          font-weight: 500;
+          color: $paragraph-color;
+        }
+
+        &:hover {
+          transform: scale(1.02);
+        }
+
+        // Border bottom
+        &:after {
+          content: '';
+          width: 100%;
+          height: 2px;
+          background-color: $dark-purple;
+          position: absolute;
+          bottom: 0px;
+          left: 0px;
+          filter: drop-shadow(0 0 2px #aa14f09d) drop-shadow(0 0 4px #aa14f09d) drop-shadow(0 0 6px #aa14f09d);
+        }
+      }
+    }
+  }
+
+  // Second div of LandingPage
+  .secondInformationLandingPageContainer {
+    @include flexSpaceEvenly;
+
+    background-image: url('../../assets/imgs/backgroundTop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    // Left texts
+    .textSecondInformationContainer {
+      @include flexCenterItems;
+      flex-direction: column;
+      flex: 1;
+
+      text-align: center;
+
+      // Section title
+      h2 {
+        @include flexCenterItems;
+
+        font-size: 2.6rem;
+        font-weight: 700;
+        color: $white;
+        border-bottom: 2px solid $light-purple;
+
+        margin-bottom: 30px;
+
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+          color: $light-purple;
+          transform: translateY(-0.5rem);
+          // border-bottom: 2px solid $dark-purple;
+        }
+
+        i {
+          margin-right: 10px;
+          color: $light-purple;
+          filter: drop-shadow(0 0 2px #bc8cf257) drop-shadow(0 0 4px #bc8cf257) drop-shadow(0 0 6px #bc8cf257);
+        }
+      }
+    }
+
+    // Right image
+    img.secondInformationImage {
+      height: 800px;
+      margin-right: 50px;
+    }
+  }
+
+  // Best Selling products
+  .bestSellingProductsContainer {
+    @include flexSpaceEvenly;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}

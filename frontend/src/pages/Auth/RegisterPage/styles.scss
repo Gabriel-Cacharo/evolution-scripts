@@ -1,0 +1,149 @@
+@import '../../../assets/styles/layouts';
+@import '../../../assets/styles/variables';
+
+.registerPage {
+  min-height: calc(100vh - 150px);
+  max-height: calc(100vh - 150px);
+
+  @include flex;
+
+  // Right container ( Register form )
+  .rightContainer {
+    width: 25%;
+    margin: 0px 20px;
+
+    @include flexCenterItems;
+
+    // Register Form
+    .registerFormContainer {
+      form {
+        @include flexCenterItems;
+        flex-direction: column;
+
+        input {
+          margin: 10px 0px;
+          width: 300px;
+          padding: 10px 10px;
+
+          background-color: $black;
+          border: none;
+          border-bottom: 1px solid $dark-purple;
+
+          font-size: 0.9rem;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        // Send button
+        button.registerButton {
+          @include flexSpaceEvenly;
+
+          margin: 10px 0px;
+          margin-top: 30px;
+          width: 180px;
+          padding: 10px 10px;
+
+          background-color: $black;
+          border: 0;
+          border-left: 2px solid $dark-purple;
+
+          font-weight: 500;
+          font-size: 1.1rem;
+
+          cursor: pointer;
+          transition: all 200ms ease-in-out;
+
+          i {
+            color: $dark-purple;
+            filter: drop-shadow(0 0 2px #aa14f07c) drop-shadow(0 0 4px #aa14f07c) drop-shadow(0 0 6px #aa14f07c);
+            font-size: 1.3rem;
+          }
+
+          &:hover {
+            transform: translateX(0.5rem);
+          }
+        }
+
+        // Password input with button
+        .passwordInputContainer {
+          position: relative;
+
+          button {
+            position: absolute;
+            right: 5px;
+            top: 18px;
+
+            background: transparent;
+            border: 0;
+
+            cursor: pointer;
+
+            i {
+              font-size: 1.3rem;
+              color: $dark-purple;
+              filter: drop-shadow(0 0 2px #aa14f07c) drop-shadow(0 0 4px #aa14f07c) drop-shadow(0 0 6px #aa14f07c);
+            }
+          }
+        }
+      }
+
+      // Link to login
+      span {
+        font-size: 0.8rem;
+        width: 100%;
+        text-align: end;
+
+        a {
+          color: $dark-purple;
+          font-weight: 600;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  // Left container ( Informations )
+  .leftContainer {
+    @include flexSpaceBetween;
+
+    background-image: linear-gradient(200deg, rgba(0, 0, 0, 0.925), rgba(0, 0, 0, 0)),
+      url('../../../assets/imgs/Gta5Wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);
+
+    width: 75%;
+    height: 100%;
+    margin-right: 20px;
+
+    // Left image
+    img {
+      height: 100%;
+      margin-left: 10px;
+    }
+
+    // Description
+    ul {
+      margin-right: 150px;
+
+      li {
+        @include flexCenterItems;
+
+        margin: 20px 30px;
+
+        font-size: 1.3rem;
+        text-align: center;
+
+        i {
+          margin-right: 5px;
+          font-size: 1.7rem;
+          color: $dark-purple;
+          filter: drop-shadow(0 0 2px #aa14f07c) drop-shadow(0 0 4px #aa14f07c) drop-shadow(0 0 6px #aa14f07c);
+        }
+      }
+    }
+  }
+}

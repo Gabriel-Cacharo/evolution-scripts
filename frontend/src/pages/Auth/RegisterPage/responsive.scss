@@ -1,0 +1,95 @@
+@media (max-width: 1400px) {
+  .registerPage {
+    .leftContainer {
+      // Shrink image
+      img {
+        height: 500px;
+        width: 450px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .registerPage {
+    // Left Container flex column
+    .leftContainer {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      width: 65%;
+
+      ul {
+        margin-right: 0;
+
+        li {
+          font-size: 1.1rem;
+        }
+      }
+
+      // Shrink image
+      img {
+        height: 500px;
+        width: 320px;
+      }
+    }
+
+    .rightContainer {
+      width: 35%;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  // Register Page flex column
+  .registerPage {
+    flex-direction: column;
+    max-height: 900vh;
+
+    // Right Container
+    .rightContainer {
+      width: 100%;
+
+      margin: 80px 0px;
+
+      // Link to login
+      .loginFormContainer span {
+        text-align: center;
+      }
+    }
+
+    // Left Container
+    .leftContainer {
+      width: 100%;
+      height: 90vh;
+
+      clip-path: polygon(0 0, 100% 0%, 100% 88%, 0% 100%);
+
+      // Left image
+      img {
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .registerPage {
+    // Shrink image
+    .leftContainer {
+      img {
+        height: 400px;
+        width: 260px;
+
+        margin-bottom: 30px;
+        margin-left: 0;
+      }
+
+      // Shrink font
+      ul li {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
